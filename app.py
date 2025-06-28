@@ -72,9 +72,16 @@ elif mode == "Engagement Detection":
             st.write(f"Students are present")
 elif mode == "Voice":
     context = st.text_area("Provide context (like a paragraph from textbook):")
-    if st.button("🎤 Record and Answer") and context:
-        st.write("Speak clearly")
-        st.success(f"📘 Answer: asking for information specifying something")
+
+    if st.button("🎤 Record"):
+        fake_recording_ui()
+        st.session_state.recorded = True
+
+    if st.session_state.get("recorded") and st.button("Submit"):
+        answer = gemini_fake_speech_answer(context)
+        st.success(f"📘 Answer: {answer}")
+        st.session_state.recorded = False
+
 
 
 
