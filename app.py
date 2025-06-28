@@ -6,6 +6,8 @@ from nlp_module import answer_question
 from vision_module import describe_image, get_image_description
 from gemini_module import ask_gemini
 
+from speech_mod import fake_recording_ui, gemini_fake_speech_answer
+
 st.set_page_config(page_title="AI Learning Assistant", layout="centered")
 st.title("🎓 AI-Powered Learning Assistant")
 
