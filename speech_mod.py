@@ -5,7 +5,7 @@ import streamlit as st
 def fake_recording_ui():
     with st.spinner("🎙 Listening... (simulated recording)"):
         st.markdown("#### 🔴 Recording in progress...")
-        st.markdown("_(Say something clearly...)_")
+        
 
 # Function to simulate Gemini answering a random sentence from context
 def gemini_fake_speech_answer(context):
